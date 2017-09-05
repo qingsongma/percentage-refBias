@@ -1,0 +1,28 @@
+#-------------------data info---------------------
+batchs      judges 
+
+batch1 = [1, 4, 10, 20, 21]
+batch2 = [5, 7, 16, 19, 22]
+batch3 = [2, 6, 8, 15, 25]
+batch4 = [9, 13, 14, 18, 24]
+batch5 = [3, 11, 12, 17, 23]
+
+* Different batches shares the same machine translations(MT), but with different references or sources.
+    (batch5 uses the source sentences)
+ 
+#------------------symbols---------------------------
+                        lower estimate upper
+unweighted kappa       
+weighted kappa         
+------------------------------------------------
+unweighted kappa: klo (lower)     k (estimate(k)     kup(upperkup)     
+weighted kappa:   kwlo (lower)    kw (estimate)      ukwup(ukwup)
+
+
+#-------------------files----------------------------
+kappas_all.txt: kappas between all judge pairs(no de-duplication)
+
+diff_ref_kappas.txt: 150    kappas between judge pairs having the different references
+same_ref_kappas.txt: 40     kappas between judge pairs having the same reference
+src_kappas.txt:      10     kappas between judge pairs having the source sentence
+
